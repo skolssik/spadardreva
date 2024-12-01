@@ -1,0 +1,12 @@
+@font-face {
+	font-family: "Inter-reg"; 
+	src: url(Inter-Regular.ttf);}
+  @font-face {
+    font-family: "Inter-bold"; 
+    src: url(Inter-Bold.ttf);}
+    @font-face {
+      font-family: "OpenSans-reg"; 
+      src: url(OpenSans-Regular.ttf);}
+      @font-face {
+        font-family: "OpenSans-bold"; 
+        src: url(OpenSans-Bold.ttf);}
