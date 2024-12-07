@@ -211,3 +211,68 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 };
+
+//modal for mob
+var modal = document.getElementById("customWindow");
+var closeButton = document.getElementById("closeBtn");
+var triggersImage_mob = document.getElementById("triggersImage_mob");
+
+// Открываем модальное окно при клике на изображение
+triggersImage_mob.onclick = function() {
+    modal.style.display = "block";
+};
+
+// Закрываем модальное окно при клике на иконку закрытия
+closeButton.onclick = function() {
+    modal.style.display = "none";
+};
+
+// Закрываем модальное окно при клике вне его содержимого
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+
+//Carousel
+const carouselWrapper = document.querySelector('.carousel-wrapper');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const nextButton = document.querySelector('.next-button');
+const prevButton = document.querySelector('.prev-button');
+
+let currentIndex = 0;
+const totalItems = carouselItems.length;
+
+// Функция для обновления отображаемых элементов
+function updateCarousel() {
+    const offset = -currentIndex * (390 + 30); // Карточка + отступ
+    carouselWrapper.style.transform = `translateX(${offset}px)`;
+}
+
+// Функция для перехода к следующему элементу
+function nextItem() {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+}
+
+// Функция для перехода к предыдущему элементу
+function prevItem() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarousel();
+}
+
+// Автоматическая прокрутка
+setInterval(nextItem, 6000); // Прокрутка каждые 6 секунд
+// Добавление обработчиков событий для кнопок
+nextButton.addEventListener('click', nextItem);
+prevButton.addEventListener('click', prevItem);
+
+//модалка при открытии сайта
+document.getElementById('closesBtn').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'none';
+});
+
+// Открытие модального окна при загрузке страницы
+window.onload = function() {
+    document.getElementById('overlay').style.display = 'flex';
+};

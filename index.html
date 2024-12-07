@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="yandex-verification" content="70dd1bfde54272e3" />
-    <title>Project4</title>
+    <title>SpadarDreva</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -30,6 +28,25 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMWTKVCF" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrapper">
+        <div id="overlay" class="overlay">
+            <div class="custom-content">
+                <span id="closesBtn" class="close-button">&times;</span>
+                <h2>Дарим дизайн-проект</h2>
+                <p>Просто напишите нам в любой<br> удобный мессенджер <br>и мы бесплатно подготовим <br>для Вас дизайн-проект кухни</p>
+                <div class="link_mes">
+                <a href="#" class="link"><img src="images/viber.svg" alt="viber"></a>
+                <a href="#" class="link"><img src="images/whatsapp.svg" alt="whatsapp"></a>
+                <a href="#" class="link"><img src="images/telegram.svg" alt="telegram"></a>
+                </div>
+                <h2>Соберите кухню <br>вашей мечты</h2>
+                <p>В нашем каталоге Вы найдете все <br>для идеальной кухни!</p>
+            </div>
+            <div class="horizontal-links">
+                <a href="#" class="oz">OZON</a>
+                <a href="#" class="wb">WILDBERRIES</a>
+            </div>
+            </div>    
+        </div>
         <section class="container-first">
             <header class="center">
                 <div class="logo">
@@ -39,7 +56,7 @@
                     <nav class="menu">
                         <ul>
                             <li class="first-link"><a href="#">Главная</a></li>
-                            <li><a href="#">О нас</a></li>
+                            <li class="second-link"><a href="#">О нас</a></li>
                             <li><a href="#">Наши кухни</a></li>
                             <li class="contact-btn"><a href="#"><img src="images/viber.svg" alt="viber"></a></li>
                             <li class="contact-btn1"><a href="#"><img src="images/whatsapp.svg" alt="whatsapp"></a></li>
@@ -80,8 +97,8 @@
                             <img src="images/box.svg" alt="box">
                             
                         </div>
-                        <div class="box-mob">
-                            <span class="mob-box"><img src="images/box.svg" alt="box">
+                        <div class="box-mob" id="triggersImage_mob" style="cursor: pointer;">
+                            <span class="mob-box""><img src="images/box.svg" alt="box">
                                 <p>ВАШ ПОДАРОК</p>
                             </span>
                         </div>
@@ -343,64 +360,114 @@
     </section>
 
     <section class="container-profile">
-        <div class="top-content center">
-            <h3>О НАС ГОВОРЯТ ПОКУПАТЕЛИ</h3>
-            <div class="botn">
-                <button class="left-bottom"><img src="images/arrow_left.svg" alt="arrow"></button>
-                <button class="right-bottom"><img src="images/arrow_right.svg" alt="arrow"></button>
+        <h3>О НАС ГОВОРЯТ ПОКУПАТЕЛИ</h3>
+        <div class="top-content">
+        <div class="carousel-container">
+            <button class="carousel-button prev-button">&#10094;</button>
+            <button class="carousel-button next-button">&#10095;</button>
+            <div class="carousel">
+            <div class="carousel-wrapper">
+                <div class="carousel-item active">
+                    <div class="content">
+                        <h5>YOUR NAME</h5>
+                        <div class="star-container">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <img src="images/about_card_img.png">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                            doloremque laudantium, totam rem aperiam, eaque ipsa architecto beatae
+                            vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content">
+                        <h5>YOUR NAME</h5>
+                        <div class="star-container">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <img src="images/about_card_img.png">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                            doloremque laudantium, totam rem aperiam, eaque ipsa architecto beatae
+                            vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content">
+                        <h5>NAME</h5>
+                        <div class="star-container">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <img src="images/about_card_img.png">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                            doloremque laudantium, totam rem aperiam, eaque ipsa architecto beatae
+                            vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content">
+                        <h5>NAME</h5>
+                        <div class="star-container">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <img src="images/about_card_img.png">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                            doloremque laudantium, totam rem aperiam, eaque ipsa architecto beatae
+                            vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content">
+                        <h5>NAME</h5>
+                        <div class="star-container">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <img src="images/about_card_img.png">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                            doloremque laudantium, totam rem aperiam, eaque ipsa architecto beatae
+                            vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="content">
+                        <h5>YOUR NAME</h5>
+                        <div class="star-container">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <img src="images/about_card_img.png">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                            doloremque laudantium, totam rem aperiam, eaque ipsa architecto beatae
+                            vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="bottom-content center">
-            <div class="one-card">
-                <div class="content">
-                    <h5>YOUR NAME</h5>
-                    <div class="star-container">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <img src="images/about_card_img.png">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                        doloremque laudantium, totam rem aperiam, eaque ipsa architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit</p>
-                </div>
-            </div>
-            <div class="second-card">
-                <div class="content">
-                    <h5>YOUR NAME</h5>
-                    <div class="star-container">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <img src="images/about_card_img.png">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                        doloremque laudantium, totam rem aperiam, eaque ipsa architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit</p>
-                </div>
-            </div>
-            <div class="third-card">
-                <div class="content">
-                    <h5>YOUR NAME</h5>
-                    <div class="star-container">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <img src="images/about_card_img.png">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                        doloremque laudantium, totam rem aperiam, eaque ipsa architecto beatae
-                        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</div> 
+</section>
     <footer>
         <div class="top-foot center">
             <img src="images/logo_white.svg" alt="logo">
@@ -411,7 +478,7 @@
                 <h5>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h5>
             </div>
         </div>
-        <div class="border_line center"></div>
+        <div class="border_line"></div>
         <div class="bottom-foot center">
             <p>Copyrights, 2024 Все права защищены</p>
             <p class="width-foot">Изображения, представленные на сайте, носят иллюстративный характер. Реальный вид кухни может отличаться от представленных на сайте</p>
@@ -424,7 +491,6 @@
 
 
     <script src="js/main.js"></script>
-    <script src="js/form.js"></script>
 
 </body>
 
